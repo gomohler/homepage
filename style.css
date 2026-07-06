@@ -1,0 +1,195 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+a { color: #7b1c1c; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ── Nav ── */
+nav {
+  background: #1a1a2e;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+nav ul li a {
+  display: block;
+  padding: 1rem 1.25rem;
+  color: #e8e8e8;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.04em;
+}
+nav ul li a:hover,
+nav ul li a.active { color: #fff; text-decoration: none; border-bottom: 2px solid #c8a96e; }
+
+/* ── Page wrapper ── */
+.page { max-width: 900px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+/* ── Hero ── */
+.hero {
+  display: flex;
+  gap: 2.5rem;
+  padding: 3rem 0 2rem;
+  align-items: flex-start;
+}
+.hero img {
+  width: 170px;
+  height: 210px;
+  object-fit: cover;
+  object-position: top;
+  border: 3px solid #ddd;
+  flex-shrink: 0;
+}
+.hero-text h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.25rem;
+}
+.hero-text .title {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.15rem;
+}
+.hero-text .contact {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  color: #333;
+}
+.hero-text .contact a { color: #7b1c1c; }
+
+/* ── Sections ── */
+section { margin-top: 2.5rem; }
+section h2 {
+  font-size: 1.1rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #1a1a2e;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Education / Employment ── */
+.entry { margin-bottom: 0.9rem; }
+.entry .degree, .entry .role {
+  font-weight: bold;
+}
+.entry .institution { color: #333; }
+.entry .year {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* ── Two-col layout for bio page ── */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+
+/* ── People lists ── */
+.people-list { list-style: none; padding: 0; }
+.people-list li { margin-bottom: 0.4rem; padding-left: 1rem; position: relative; }
+.people-list li::before { content: '–'; position: absolute; left: 0; color: #999; }
+
+/* ── Service list ── */
+.service-list { list-style: none; padding: 0; }
+.service-list li { margin-bottom: 0.4rem; padding-left: 1rem; position: relative; }
+.service-list li::before { content: '–'; position: absolute; left: 0; color: #999; }
+
+/* ── Grants ── */
+.grant { margin-bottom: 1rem; padding-left: 1rem; border-left: 3px solid #e0c88a; }
+.grant p { margin: 0; font-size: 0.95rem; }
+
+/* ── Publications ── */
+.pub-year {
+  font-size: 1.05rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 1.75rem 0 0.5rem;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 0.2rem;
+}
+.pub {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+  font-size: 0.93rem;
+  line-height: 1.55;
+  align-items: baseline;
+}
+.pub .num {
+  min-width: 2.8rem;
+  text-align: right;
+  color: #888;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.pub .ref { flex: 1; }
+.pub .ref em { font-style: italic; }
+.pub-links { margin-top: 0.15rem; }
+.pub-links a {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.78rem;
+  background: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 0.05rem 0.45rem;
+  color: #444;
+}
+.pub-links a:hover { background: #7b1c1c; color: #fff; border-color: #7b1c1c; text-decoration: none; }
+.pub-links a.pdf { background: #7b1c1c; color: #fff; border-color: #7b1c1c; }
+.pub-links a.pdf:hover { background: #5a1414; }
+
+/* ── CV page ── */
+.cv-link-block {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  background: #fafafa;
+  text-align: center;
+}
+.cv-link-block a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #7b1c1c;
+}
+
+/* ── Footer ── */
+footer {
+  margin-top: 4rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .hero { flex-direction: column; }
+  .hero img { width: 140px; height: 175px; }
+  .two-col { grid-template-columns: 1fr; }
+}
